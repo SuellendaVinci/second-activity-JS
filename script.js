@@ -76,8 +76,8 @@ grade2.addEventListener("keyup", (e) => {
 
 let register01 = document.getElementById("register-student");
 register01.addEventListener("keyup", (e) => {
-    register = parseInt(e.target.value);
-})
+  register = parseInt(e.target.value);
+});
 
 let button_waverage = document.getElementById("calcula_media_ponderada");
 button_waverage.addEventListener("click", () => {
@@ -107,7 +107,6 @@ let w2 = null;
 let g1 = null;
 let g2 = null;
 
-
 let weighted_average = null;
 
 let weight_1 = document.getElementById("weight01");
@@ -132,8 +131,8 @@ grade_2.addEventListener("keyup", (e) => {
 
 let registerXX = document.getElementById("register-student01");
 registerXX.addEventListener("keyup", (e) => {
-    registerX = parseInt(e.target.value);
-})
+  registerX = parseInt(e.target.value);
+});
 
 let buttonWaverage = document.getElementById("calcula_media_ponderada2");
 buttonWaverage.addEventListener("click", () => {
@@ -225,7 +224,6 @@ button_price.addEventListener("click", () => {
   price_result.textContent = `The final price is: ${price}`;
 });
 
-
 // EXERCISE 6
 
 const inss = (salary) => {
@@ -274,4 +272,4 @@ calculateButton.addEventListener("click", () => {
     fgtsResult.textContent = `My FGTS: R$ ${fgtsValue}`;
     healthCareReasult.textContent = `Health Care Value: R$ ${healthCareValue}`;
   }
-}); 
+});
