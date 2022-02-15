@@ -1,4 +1,4 @@
-<!-- Exercícios de Fixação 02
+Exercícios de Fixação 02
 
 Professor: Luis Bicalho
 Estudante: Suellen Camargo
@@ -22,5 +22,5 @@ calcula_media_ponderada(): recebe 2 notas (reais) e seus respectivos pesos (inte
 
 - INSS: 10% do valor bruto;
 - FGTS: 8% do valor bruto;
-- Plano de Saúde: R$100,00. -->
+- Plano de Saúde: R$100,00.
 
