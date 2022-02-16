@@ -38,6 +38,16 @@ button_average.addEventListener("click", () => {
   multiplication_result.textContent = `The multiplication is: ${multiplication}`;
 });
 
+let button_delete = document.getElementById("delete");
+button_delete.addEventListener("click", () => {
+  first_number.value = "";
+  second_number.value = "";
+  let average_result = document.getElementById("average");
+  let multiplication_result = document.getElementById("multiplication");
+  average_result.textContent = "";
+  multiplication_result.textContent = "";
+});
+
 // EXERCISE 02
 
 const calcula_media_ponderada = (w1, w2, g1, g2) => {
@@ -88,9 +98,22 @@ button_waverage.addEventListener("click", () => {
     grade02
   );
   let register_result = document.getElementById("register");
-  register_result.textContent = `The student register number is: ${register}`;
+  register_result.textContent = `Student register number: ${register}`;
   let weightedAverage_result = document.getElementById("weightedAverage");
   weightedAverage_result.textContent = `The weighted average is: ${weightedAverage}`;
+});
+
+let button_delete1 = document.getElementById("delete1");
+button_delete1.addEventListener("click", () => {
+  weight1.value = "";
+  weight2.value = "";
+  grade1.value = "";
+  grade2.value = "";
+  register01.value = "";
+  let register_result = document.getElementById("register");
+  let weightedAverage_result = document.getElementById("weightedAverage");
+  register_result.textContent = "";
+  weightedAverage_result.textContent = "";
 });
 
 // EXERCISE 03
@@ -141,6 +164,19 @@ buttonWaverage.addEventListener("click", () => {
   register_result01.textContent = `The student register number is: ${registerX}`;
   let weighted_average_result = document.getElementById("weighted-average");
   weighted_average_result.textContent = `The weighted average is: ${weighted_average}`;
+});
+
+let button_delete2 = document.getElementById("delete2");
+button_delete2.addEventListener("click", () => {
+  weight_1.value = "";
+  weight_2.value = "";
+  grade_1.value = "";
+  grade_2.value = "";
+  registerXX.value = "";
+  let register_result01 = document.getElementById("register01");
+  let weighted_average_result = document.getElementById("weighted-average");
+  register_result01.textContent = "";
+  weighted_average_result.textContent = "";
 });
 
 // EXERCISE 04
@@ -202,6 +238,18 @@ button_wa.addEventListener("click", () => {
   wa_result.textContent = `The weighted average of the class is: ${wa}`;
 });
 
+let button_delete3 = document.getElementById("delete3");
+button_delete3.addEventListener("click", () => {
+  weight001.value = "";
+  weight002.value = "";
+  grade001.value = "";
+  grade002.value = "";
+  grade003.value = "";
+  grade004.value = "";
+  let wa_result = document.getElementById("weighted-average01");
+  wa_result.textContent = "";
+});
+
 // EXERCISE 5
 
 const total_price = (price) => {
@@ -219,9 +267,17 @@ price01.addEventListener("keyup", (e) => {
 
 let button_price = document.getElementById("show_price");
 button_price.addEventListener("click", () => {
-  price = total_price(price);
+  let final_price = total_price(price);
   let price_result = document.getElementById("price_result");
-  price_result.textContent = `The final price is: ${price}`;
+  price_result.textContent = `The final price is: ${final_price}`;
+});
+
+let button_delete4 = document.getElementById("delete4");
+button_delete4.addEventListener("click", () => {
+  price01.value = "";
+
+  let price_result = document.getElementById("price_result");
+  price_result.textContent = "";
 });
 
 // EXERCISE 6
@@ -245,9 +301,9 @@ const final_salary = (salary) => {
   return final_s;
 };
 
-const salaryInput = document.getElementById("salary");
+let salaryInput = document.getElementById("salary");
 
-const calculateButton = document.getElementById("calculateButton");
+let calculateButton = document.getElementById("calculateButton");
 
 let salary = null;
 let inssValue = null;
@@ -260,16 +316,32 @@ salaryInput.addEventListener("keyup", (e) => {
 
 calculateButton.addEventListener("click", () => {
   if (salary) {
-    inssValue = Number(inss(salary));
-    fgtsValue = Number(fgts(salary));
-    healthCareValue = Number(healthcare_plan(salary));
+    inssValue = parseFloat(inss(salary));
+    fgtsValue = parseFloat(fgts(salary));
+    healthCareValue = parseFloat(healthcare_plan(salary));
 
-    const inssResult = document.getElementById("inssResult");
-    const fgtsResult = document.getElementById("fgtsResult");
-    const healthCareReasult = document.getElementById("healthCareReasult");
+    let inssResult = document.getElementById("inssResult");
+    let fgtsResult = document.getElementById("fgtsResult");
+    let healthCareResult = document.getElementById("healthCareResult");
 
     inssResult.textContent = `INSS tax: R$ ${inssValue}`;
     fgtsResult.textContent = `My FGTS: R$ ${fgtsValue}`;
-    healthCareReasult.textContent = `Health Care Value: R$ ${healthCareValue}`;
+    healthCareResult.textContent = `Health Care Value: R$ ${healthCareValue}`;
   }
+});
+
+let button_delete5 = document.getElementById("delete5");
+button_delete5.addEventListener("click", () => {
+  inssValue.value = "";
+  fgtsValue.value = "";
+  healthCareValue.value = "";
+  salaryInput.value = "";
+
+  let inssResult = document.getElementById("inssResult");
+  let fgtsResult = document.getElementById("fgtsResult");
+  let healthCareResult = document.getElementById("healthCareResult");
+
+  inssResult.textContent = "";
+  fgtsResult.textContent = "";
+  healthCareResult.textContent = "";
 });
